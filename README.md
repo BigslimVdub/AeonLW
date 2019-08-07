@@ -1,18 +1,24 @@
-A new lightweight GUI Wallet for AEON community users
+# A new lightweight GUI Wallet for AEON community users
+
+![AeonLW Dark mode](https://github.com/BigslimVdub/AeonLW/tree/master/Images/AeonLW%20OSX%20Dark%20Mode.png)
+
+![AeonLW Light mode](https://github.com/BigslimVdub/AeonLW/tree/master/Images/AeonLW%20OSX%20Light%20Mode.png)
 
 ---
 
-Meet AeonLW, the new Electron based Aeon Wallet. This wallet is a new lightweight wallet for Aeon users. It adds to the usability of Aeon to anyone who choses to use the currency.
+Welcome to AeonLW, the new Electron based Aeon Wallet. This wallet is a new lightweight wallet for Aeon users. It adds to the usability of Aeon for anyone who choses to use the currency.
+
+![AeonLW Startup](https://github.com/BigslimVdub/AeonLW/tree/master/Images/App%20startup.png)
 
 - Wallet switch option.
-You can keep several Aeon wallets on one PC, and quickly switch between them without the need for closing and re-opening the wallet application.
+You can keep several Aeon wallets on one PC, and quickly switch between them.
 
--Mixed daemon and wallet sync. logic
-We took best from both ways of sync: remote (speed) and local (reliability). At wallet startup, you connect to a remote node allowing a faster yet still secure sync. At the same time of this sync, you downloading the blockchain files on your hard drive in the background. It will add more reliability to wallet operation. If remote connection fails, you will have a local node running. You can also choose to run the wallet as a normal full node with the blockchain stored locally on your PC or lite remote node only option.
+-Local and Remote Daemon usage
+We took best from both ways of sync: remote (speed) and local (reliability). At wallet startup, you connect to a remote node allowing a faster yet still secure sync, or a local daemon where you're downloading the blockchain files on your hard drive in the background.
 
 - Advanced user settings
 You can rely on predefined optimum settings, or you can edit settings of the wallet:
-  - Wallet Syncronization Switch (mixed/local/remote nodes)
+  - Wallet Syncronization Switch (local/remote nodes)
   - Lmdb storage path (define your blockchain storage location)
   - Various ports for wallet and daemon usage (daemon, p2p, aeond, remote etc)
   - Remote node URL (define what remote nodes you connect to)
@@ -21,8 +27,11 @@ You can rely on predefined optimum settings, or you can edit settings of the wal
 -  Address book
 Adding recipients into your address book will allow you keep track of who you have sent funds to - you can add recipients of your payments before or after transactions have been processed.
 
+-Auto Integrated Address creation
+When creating a new wallet, integrated address' are automatically created for you. 
+
 - Transaction history tab
-A scrollable field where you can check your prior transactions quickly and securely.
+A scrollable field where you can check your prior transactions quickly and securely. You can also check your transactions on a block explorer through the wallet interface button.
 
 - Non English seed restore
 Restore your wallet with non-English characters (Russian, German, Chinese and other languages)
@@ -54,7 +63,8 @@ npm run build-all
 
 ### LICENSE
 
-Copyright (c) 2018, Ryo Currency Project
+Copyright (c) 2018-2019, Ryo Currency Project
+
 Copyright (c) 2019, Aeon Currency Project
 
 Portions of this software are available under BSD-3 license. Please see ORIGINAL-LICENSE for details
@@ -98,4 +108,5 @@ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR B
 INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
 STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 # AeonLW
