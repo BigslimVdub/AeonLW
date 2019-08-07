@@ -1,14 +1,14 @@
 # A new lightweight GUI Wallet for AEON community users
 
-![AeonLW Dark mode](https://github.com/BigslimVdub/AeonLW/tree/master/Images/AeonLW%20OSX%20Dark%20Mode.png)
+![AeonLW Dark mode](https://github.com/BigslimVdub/AeonLW/blob/master/Images/AeonLW%20OSX%20Dark%20Mode.png)
 
-![AeonLW Light mode](https://github.com/BigslimVdub/AeonLW/tree/master/Images/AeonLW%20OSX%20Light%20Mode.png)
+![AeonLW Light mode](https://github.com/BigslimVdub/AeonLW/blob/master/Images/AeonLW%20OSX%20Light%20Mode.png)
 
 ---
 
 Welcome to AeonLW, the new Electron based Aeon Wallet. This wallet is a new lightweight wallet for Aeon users. It adds to the usability of Aeon for anyone who choses to use the currency.
 
-![AeonLW Startup](https://github.com/BigslimVdub/AeonLW/tree/master/Images/App%20startup.png)
+![AeonLW Startup](https://github.com/BigslimVdub/AeonLW/blob/master/Images/App%20startup.png)
 
 - Wallet switch option.
 You can keep several Aeon wallets on one PC, and quickly switch between them.
