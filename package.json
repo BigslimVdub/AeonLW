@@ -1,0 +1,65 @@
+{
+  "name": "AeonLW",
+  "version": "1.0.0",
+  "daemonVersion": "0.12.9.0",
+  "description": "A Lightweight Digital Aeon Wallet",
+  "productName": "AEONLW",
+  "cordovaId": "com.Aeon.AeonLW",
+  "author": {
+    "name": "Aeon-Community",
+    "email": "Blitzkrieg000@protonmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev -m electron -t mat",
+    "build": "quasar build -m electron -t mat",
+    "lint": "eslint --ext .js,.vue src",
+    "lint-fix": "eslint --fix .",
+    "test": "echo \"No test specified\" && exit 0",
+    "build-all": "electron-builder -mwl"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "electron-window-state": "^5.0.2",
+    "object-assign-deep": "^0.4.0",
+    "portscanner": "^2.2.0",
+    "promise-queue": "^2.2.5",
+    "qrcode.vue": "^1.6.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "vue-i18n": "^7.3.3",
+    "vue-timeago": "^5.0.0",
+    "vuelidate": "^0.7.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "devtron": "^1.4.0",
+    "electron": "^2.0.0",
+    "electron-builder": "^20.28.4",
+    "electron-debug": "^1.5.0",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-packager": "^12.1.1",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.3.0",
+    "node-sass": "^4.12.0",
+    "quasar-cli": "^0.16.0",
+    "sass-loader": "^7.1.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
