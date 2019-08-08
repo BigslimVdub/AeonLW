@@ -174,6 +174,10 @@ module.exports = function (ctx) {
                 // directories: {
                 //     buildResources: "src-electron/build"
                 // },
+                publish: "github",
+                files: [
+                    "!dev-app-update.yml"
+                ],
 
                 linux: {
                     target: ["deb"],

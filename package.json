@@ -4,6 +4,10 @@
   "daemonVersion": "0.12.9.0",
   "description": "A Lightweight Digital Aeon Wallet",
   "productName": "AEONLW",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigslimVdub/AeonLW.git"
+  },
   "cordovaId": "com.Aeon.AeonLW",
   "author": {
     "name": "Aeon-Community",
