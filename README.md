@@ -71,33 +71,16 @@ Portions of this software are available under BSD-3 license. Please see ORIGINAL
 
 All rights reserved.
 
-Authors and copyright holders give permission for following:
+This is an open sourced project. Anyone can contribute. 
 
-1. Redistribution and use in source and binary forms WITHOUT modification.
+If you would like to contribute outside software changes, please feel free to contribute here:
 
-2. Modification of the source form for your own personal use.
+Aeon address: XnZQsgTMKciVcyZxNch8TneZMNy4rCTmc5dgZ1GKEkAs3kGb89q3m26hUWtXUvcJNpgBikLTdoHkCXYcqxPJBwA3373F4hcVc
 
-As long as the following conditions are met:
+XMR addres: 85PJWUVwPJZQqP4WCZfNzUJ7X89YQoHDU3ponKBeqyzV7MKxzkWkzerJy3Yfo3gYwXi92uoF7KodkinZfA9aeVpRPPEXpAh
 
-3. You must not distribute modified copies of the work to third parties. This includes
-   posting the work online, or hosting copies of the modified work for download.
-
-4. Any derivative version of this work is also covered by this license, including point 8.
-
-5. Neither the name of the copyright holders nor the names of the authors may be
-   used to endorse or promote products derived from this software without specific
-   prior written permission.
-
-6. You agree that this licence is governed by and shall be construed in accordance
-   with the laws of England and Wales.
-
-7. You agree to submit all disputes arising out of or in connection with this licence
-   to the exclusive jurisdiction of the Courts of England and Wales.
-
-Authors and copyright holders agree that:
-
-8. This licence expires and the work covered by it is released into the
-   public domain on 1st of February 2019
+Thank you for supporting this project. Feedback is welcomed in any form. Please give thanks to Mosu-Forge for the
+original implementation of Electron wallet for Ryo. 
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
