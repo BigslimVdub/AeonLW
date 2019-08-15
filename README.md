@@ -51,13 +51,18 @@ cp /path/to/aeon/binaries/aeond /path/to/AeonLW/bin/
 cp /path/to/aeon/binaries/aeon-wallet-rpc /path/to/AeonLW/bin/
 cd /path/to/AeonLW
 npm install
-quasar build -m electron -t mat
+npm run build
 ```
 To build on all operating systems run:
 
 ```
 npm run build-all
 ```
+
+### NOTE:
+For building on the v0.12.9.0 Aeon network, for full functionality you must use 12.9 release daemon and current 12.9 master RPC for seed and wallet restore functions. 
+If you use the current 12.9 release RPC you will be unable to restore a wallet and unable to restore or import a wallet made on v1.0.0 release on a later AeonLW release.
+It is recommended to make a NEW wallet with AeonLW v1.0.0 release.
 
 ---
 
