@@ -14,7 +14,7 @@ Welcome to AeonLW, the new Electron based Aeon Wallet. This wallet is a new ligh
 You can keep several Aeon wallets on one PC, and quickly switch between them.
 
 -Local and Remote Daemon usage
-We took best from both ways of sync: remote (speed) and local (reliability). At wallet startup, you connect to a remote node allowing a faster yet still secure sync, or a local daemon where you're downloading the blockchain files on your hard drive in the background.
+    -We took best from both ways of sync: remote (speed) and local (reliability). At wallet startup, you connect to a remote node allowing a faster yet still secure sync, or a local daemon where you're downloading the blockchain files on your hard drive in the background.
 
 - Advanced user settings
 You can rely on predefined optimum settings, or you can edit settings of the wallet:
@@ -28,7 +28,7 @@ You can rely on predefined optimum settings, or you can edit settings of the wal
 Adding recipients into your address book will allow you keep track of who you have sent funds to - you can add recipients of your payments before or after transactions have been processed.
 
 -Auto Integrated Address creation
-When creating a new wallet, integrated address' are automatically created for you. 
+    -When creating a new wallet, integrated address' are automatically created for you. 
 
 - Transaction history tab
 A scrollable field where you can check your prior transactions quickly and securely. You can also check your transactions on a block explorer through the wallet interface button.
