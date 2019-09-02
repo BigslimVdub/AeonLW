@@ -159,14 +159,11 @@ export default {
                 }
             },
             mixinOptions: [
-                {label: "0 mixin (Lowest)", value: 0},
-                {label: "2 mixins (Default)", value: 2},
-                {label: "9 mixins (Higher)", value: 9},
-                {label: "19 mixins (MAX)", value: 19},
-                {label: "99 mixins (!CRAZY!)", value: 99},
+                {label: "Locked Ring Size 3", value: 2},
             ],
             priorityOptions: [
                 {label: "Normal (x1 fee)", value: 1},
+                {label: "Faster (x2 fee)", value: 2},
                 {label: "Fast (x5 fee)", value: 3},
                 {label: "Fastest (x41.5 fee)", value: 4},
             ],
@@ -255,7 +252,7 @@ export default {
                 this.$q.notify({
                     type: "negative",
                     timeout: 2000,
-                    message: "You have too many Aeon Coins to send, Try Again =)"
+                    message: "You have too many Aeon Coins to send, Donate some =)"
                 })
                 return
             } else if(this.newTx.amount > this.unlocked_balance / 1e12) {

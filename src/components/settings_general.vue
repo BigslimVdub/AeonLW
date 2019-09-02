@@ -6,10 +6,10 @@
     </div>
 
     <p v-if="config.daemon.type == 'local'">
-        Full privacy, wallet will download the full blockchain. You will not be able to transact until sync is completed.
+        Full privacy, wallet will download the full blockchain. You will not be able to transact until sync is completed. This may take a while to sync.
     </p>
     <p v-if="config.daemon.type == 'remote'">
-        Less privacy, wallet will connect to a remote node to make all transactions.
+        Less privacy, wallet will connect to a remote node to make all transactions. This is fairly quick for usage.
     </p>
 
     <q-field v-if="config.daemon.type != 'remote'">

@@ -421,7 +421,7 @@ export default {
             if(this.modals.rescan.type == "full") {
                 this.$q.dialog({
                     title: "Rescan wallet",
-                    message: "Warning: Some information about previous transactions\nsuch as the recipient's address will be lost.",
+                    message: "Warning: Some information about previous transactions\nsuch as the recipient's address will be lost.\nThis may take a while on slower hardware.",
                     ok: {
                         label: "RESCAN"
                     },
