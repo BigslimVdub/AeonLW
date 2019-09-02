@@ -58,10 +58,13 @@ To build on all operating systems run:
 npm run build-all
 ```
 
-### NOTE:
+### Change NOTES:
+
 For building on the v0.12.9.0 Aeon network, for full functionality you must use 12.9 release daemon and current 12.9 master RPC for seed and wallet restore functions. 
 If you use the current 12.9 release RPC you will be unable to restore a wallet and unable to restore or import a wallet made on v1.0.0 release on a later AeonLW release.
 It is recommended to make a NEW wallet with AeonLW v1.0.0 release.
+
+Version 1.0.1 has the "pre-release" functionality of K12 with locked ring 3 and updated fee structure. Please use the latest pre-release binaries for K12 fork with this version if building from source. 
 
 ---
 
