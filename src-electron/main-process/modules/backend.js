@@ -9,7 +9,7 @@ const fs = require("fs");
 const path = require("path");
 
 export class Backend {
-    constructor(mainWindow) {
+    constructor (mainWindow) {
         this.mainWindow = mainWindow
         this.daemon = null
         this.walletd = null
@@ -22,8 +22,7 @@ export class Backend {
     }
 
     init(config) {
-
-        if(os.platform() == "win32") {
+        if (os.platform() === "win32") {
         this.config_dir = "C:\\ProgramData\\Aeon";
         //this.config_dir = path.join(os.homedir(), "Aeon");
         } else {
@@ -149,15 +148,29 @@ export class Backend {
                     if(i == "appearance") return
                     Object.keys(this.config_data[i]).map(j => {
                         if(this.config_data[i][j] !== params[i][j])
-                            config_changed = true
+                            {config_changed = true}
                     })
                 })
             case "save_config_init":
                 Object.keys(params).map(key => {
                     this.config_data[key] = Object.assign(this.config_data[key], params[key])
-                });
-                fs.writeFile(this.config_file, JSON.stringify(this.config_data, null, 4), 'utf8', () => {
+                })
 
+                const validated = Object.keys(this.defaults)
+                  .filter(k => k in this.config_data)
+                  .map(k => [k, this.validate_values(this.config_data[k], this.defaults[k])])
+                  .reduce((map, obj) => {
+                               map[obj[0]] = obj[1]
+                               return map
+                     }, {})
+
+                     // Validate deamon data
+                       this.config_data = {
+                            ...this.config_data,
+                            ...validated
+                                }
+
+                fs.writeFile(this.config_file, JSON.stringify(this.config_data, null, 4), 'utf8', () => {
                     if(data.method == "save_config_init") {
                         this.startup();
                     } else {
@@ -313,19 +326,20 @@ export class Backend {
                             }
                         });
                     }).catch(error => {
+                        this.daemon.killProcess()
+                        this.send("show_notification", { type: "negative", message: error.message, timeout: 3000 })
                         this.send("set_app_data", {
                             status: {
                                 code: -1 // Return to config screen
                             }
                         });
-                        return;
                     });
 
                 }).catch(error => {
                     if(this.config_data.daemon.type == "remote") {
-                        this.send("show_notification", {type: "negative", message: "Remote daemon cannot be reached", timeout: 2000})
+                        this.send("show_notification", {type: "negative", message: "Remote daemon cannot be reached", timeout: 3000})
                     } else {
-                        this.send("show_notification", {type: "negative", message: "Local daemon internal error", timeout: 2000})
+                        this.send("show_notification", {type: "negative", message: "Local daemon internal error", timeout: 3000})
                     }
                     this.send("set_app_data", {
                         status: {
