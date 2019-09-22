@@ -36,7 +36,7 @@ Welcome to AeonLW, the new Electron based Aeon Wallet. This wallet is a new ligh
    Restore your wallet with non-English characters (Russian, German, Chinese and other languages)
 
 ## Import wallet from old versions of Aeon
-   Use legacy or current wallet seed & key to restore wallets. You can also restore from key files with the correct password.
+   Use legacy or current wallet seed & key to restore wallets. You can also restore from AeonLW generated key files with the correct password.
 
 ---
 
@@ -60,11 +60,15 @@ npm run build-all
 
 ### Change NOTES:
 
-For building on the v0.12.9.0 Aeon network, for full functionality you must use 12.9 release daemon and current 12.9 master RPC for seed and wallet restore functions. 
-If you use the current 12.9 release RPC you will be unable to restore a wallet and unable to restore or import a wallet made on v1.0.0 release on a later AeonLW release.
-It is recommended to make a NEW wallet with AeonLW v1.0.0 release.
+Version 1.0.1 has the "pre-release" functionality of K12 with locked ring 3 and updated fee structure. Please use the latest pre-release binaries for K12 fork you generate with this version if building from source. This version of 1.0.1 can be used on mainnet as of 9_10_2019. 
 
-Version 1.0.1 has the "pre-release" functionality of K12 with locked ring 3 and updated fee structure. Please use the latest pre-release binaries for K12 fork with this version if building from source. 
+### Known AeonLW Bugs/Issues
+
+* When first installing AeonLW with no Aeon blockchain file in your specified folder (you have never synced a daemon with the Aeon network before), AeonLW may take a while to sync with the network as it is doing a full sync not fast sync validating all blocks on the blockchain from 0. Fix- Wait for daemon to sync. This may take up to 2 hours on lower-end hardware (ex: HDD or 2 core processor) or longer if the user has poor/slow internet connection. Aeon blockchain sync time is considerably faster than other blockchains with 5 years of blockchain history to validate and 8gb of data.
+
+* If the user creates a wallet before the daemon sync is 0 and moves to wallet main screen, updating progress may look like it is stuck for block sync and wallet sync. Daemon and Wallet are syncing in the background and some lower-end hardware takes longer to refresh the status bars. Fix- User closes the application and reopens and an updated block height will be shown for both as sync re-continues.
+
+* If the user selects a remote node that does not support the latest Daemon or Wallet, the application may hang up. Fix- Use local daemon or remote daemon with a known latest daemon matching AeonLW in operation. AeonLW does save RPC logs in .Aeon/logs folder where user can check errors noted by the wallet-rpc embedded in AeonLW.
 
 ---
 
