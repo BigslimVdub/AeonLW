@@ -46,6 +46,8 @@ Welcome to AeonLW, the new Electron based Aeon Wallet. This wallet is a new ligh
 npm install -g quasar-cli
 git clone https://github.com/aeonix/aeon
 cd aeon
+-- for development testing: make release-static (Wait for aeon to build binaries)
+-- for personal use: You can download the latest Aeon cli release and use those binaries.
 cp /path/to/aeon/binaries/aeond /path/to/AeonLW/bin/
 cp /path/to/aeon/binaries/aeon-wallet-rpc /path/to/AeonLW/bin/
 cd /path/to/AeonLW
@@ -57,10 +59,13 @@ To build on all operating systems run:
 ```
 npm run build-all
 ```
+Note: this has not been fully tested, recommend to use ``npm run build`` for your specific operating system.
 
 ### Change NOTES:
 
-Version 1.0.1 has the "pre-release" functionality of K12 with locked ring 3 and updated fee structure. Please use the latest pre-release binaries for K12 fork you generate with this version if building from source. This version of 1.0.1 can be used on mainnet as of 9_10_2019. 
+v1.0.0 - Initial release usable on Daemon version 0.12.9.0 mainnet. 
+v1.0.1 - Maintenance release to incorporate locked ring 3 and use of latest Aeon binaries from 9/2019
+v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0, minor enhancements to operation and text for better UX
 
 ### Known AeonLW Bugs/Issues
 
@@ -71,6 +76,10 @@ Version 1.0.1 has the "pre-release" functionality of K12 with locked ring 3 and 
 * If the user creates or restores a wallet after daemon sync is 100% and user moves to wallet main screen, progress bar shows 1/***** 0% for a while. Fix- Wallet files take time to validate all blocks from 0 to ensure no transactions are missed. Please wait for wallet sync to finish. The same issues apply here as noted in issue one. Full wallet sync with a synced daemon should take about 45minutes from block 0 using a fully synced daemon using modern hardware. Remote node sync may be slower depending on hardware or data transfer limits of remote node. 
 
 * If the user selects a remote node that does not support the latest Daemon or Wallet, the application may hang up. Fix- Use local daemon or remote daemon with a known latest daemon matching AeonLW in operation. AeonLW does save RPC logs in .Aeon/logs folder where user can check errors noted by the wallet-rpc embedded in AeonLW.
+
+* AeonLW will not import my old wallet.keys file I used before trying AeonLW. Fix- AeonLW can not import wallet files from anything other than AeonLW generated electron wallet files. If you try importing a wallet file generated from the Official Aeon-GUI or Simplewallet it will fail. Try restoring from seed words in AeonLW if you want to use your old wallet on AeonLW.
+
+* I tried AeonLW but want to go back to using an older blockchain version of Aeon for some reason. Fix- You will not be able to use an older AeonLW version with a current blockchain version file. AeonLW will fail or lock up due to no error handling for this. If you want to use an older version of AeonLW, you must either choose a new blockchain file location and re-sync the blockchain or delete your current blockchain LMDB file and resync from 0 in the standard location /aeon/lmdb/.
 
 ---
 

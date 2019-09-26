@@ -80,7 +80,7 @@ export default {
                 case 5:
                     this.$q.notify({
                         type: "warning",
-                        timeout: 2000,
+                        timeout: 4000,
                         message: "Warning: Aeond not found, using remote node"
                     })
                     break;

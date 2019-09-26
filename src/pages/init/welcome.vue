@@ -51,22 +51,21 @@
 
             <p>You are using a
                 <template v-if="pending_config.daemon.type == 'local'">
-                    <code>local node</code>
+                    <code> local node </code>
                 </template>
                 <template v-if="pending_config.daemon.type == 'local_remote'">
-                    <code>local + remote node</code>
+                    <code> local + remote node </code>
                 </template>
                 <template v-if="pending_config.daemon.type == 'remote'">
-                    <code>remote node</code>
+                    <code> remote node </code>
                 </template>
                 <template v-if="pending_config.app.testnet">
-                    <code>on testnet</code>
-                </template>
-                and will store data in
+                    <code> on testnet </code>
+                </template> and will store data in 
                 <code>{{ pending_config.app.data_dir }}</code>
             </p>
 
-            <p>Press next to sync with the Aeon network!</p>
+            <p>Press "next" to sync with the Aeon network!</p>
 
         </q-step>
 
@@ -107,7 +106,7 @@ export default {
     }),
     data() {
         return {
-            choose_theme: "light",
+            choose_theme: "dark",
             choose_lang: "EN",
             version: "",
             daemonVersion: ""

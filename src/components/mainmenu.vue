@@ -120,12 +120,12 @@ export default {
                     // short delay to prevent wallet data reaching the
                     // websocket moments after we close and reset data
                     this.$store.dispatch("gateway/resetWalletData")
-                }, 250);
+                }, 500);
             }).catch(() => {
             })
         },
         exit () {
-            this.$gateway.confirmClose("Are you sure you want to exit?")
+            this.$gateway.confirmClose("Are you sure you want to exit AeonLW?")
         }
     },
     components: {

@@ -6,19 +6,19 @@
         <q-tabs class="col" align="justify" :color="theme == 'dark' ? 'light' : 'dark'" inverted>
 
             <q-route-tab to="/wallet" default slot="title">
-                <span><q-icon name="attach_money" /> Wallet</span>
+                <span><q-icon name="attach_money" /> Your Wallet</span>
             </q-route-tab>
             <q-route-tab to="/wallet/receive" slot="title">
-                <span><q-icon name="call_received" /> Receive</span>
+                <span><q-icon name="call_received" /> Receive Aeon</span>
             </q-route-tab>
             <q-route-tab to="/wallet/send" slot="title">
-                <span><q-icon name="call_made" /> Send</span>
+                <span><q-icon name="call_made" /> Send Aeon</span>
             </q-route-tab>
             <q-route-tab to="/wallet/addressbook" slot="title">
                 <span><q-icon name="person" /> Address Book</span>
             </q-route-tab>
             <q-route-tab to="/wallet/txhistory" slot="title">
-                <span><q-icon name="history" /> TX History</span>
+                <span><q-icon name="history" /> Transaction History</span>
             </q-route-tab>
 
         </q-tabs>
