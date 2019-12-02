@@ -52,7 +52,7 @@ export class Backend {
 
             daemon: {
                 type: "remote",
-                remote_host: "node.aeon-wallet.net",
+                remote_host: "nodes.hashvault.pro",
                 remote_port: 11181,
                 p2p_bind_ip: "0.0.0.0",
                 p2p_bind_port: 11180,

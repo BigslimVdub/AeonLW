@@ -38,12 +38,15 @@
 
     </div>
 
+    <WalletLoading ref="loading" />
+
 </q-page>
 </template>
 
 <script>
 import { required } from "vuelidate/lib/validators"
 import { mapState } from "vuex"
+import WalletLoading from "components/wallet_loading"
 export default {
     data () {
         return {
@@ -124,6 +127,9 @@ export default {
         cancel() {
             this.$router.replace({ path: "/wallet-select" });
         }
+    },
+    components: {
+        WalletLoading
     }
 }
 </script>

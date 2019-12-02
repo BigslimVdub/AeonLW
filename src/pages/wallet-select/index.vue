@@ -64,6 +64,8 @@
         </template>
     </q-list>
 
+    <WalletLoading ref="loading" />
+
 </q-page>
 </template>
 
@@ -71,6 +73,7 @@
 const { clipboard } = require("electron")
 import { mapState } from "vuex"
 import Identicon from "components/identicon"
+import WalletLoading from "components/wallet_loading"
 export default {
     computed: mapState({
         theme: state => state.gateway.app.config.appearance.theme,
@@ -97,7 +100,7 @@ export default {
                     }
                 }).then(password => {
                     this.$q.loading.show({
-                        delay: 0
+                        delay: 100
                     })
                     this.$gateway.send("wallet", "open_wallet", {name: wallet.name, password: password});
                 })
@@ -105,7 +108,7 @@ export default {
                 })
             } else {
                 this.$q.loading.show({
-                    delay: 0
+                    delay: 100
                 })
                 this.$gateway.send("wallet", "open_wallet", {name: wallet.name, password: ""});
             }
@@ -170,7 +173,8 @@ export default {
         }
     },
     components: {
-        Identicon
+        Identicon,
+        WalletLoading
     }
 }
 </script>
