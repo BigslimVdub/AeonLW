@@ -190,7 +190,7 @@ export class Backend {
 
             case "open_explorer":
                 if(params.type == "tx") {
-                    require("electron").shell.openExternal("https://www.aeonstats.com/tx/"+params.id)
+                    require("electron").shell.openExternal("http://162.210.173.150/tx/"+params.id)
                 }
                 break;
 

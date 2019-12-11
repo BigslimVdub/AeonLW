@@ -49,6 +49,7 @@
                     <a @click="openExternal('https://twitter.com/AeonCoin')" href="#">Twitter</a> -
                     <a @click="openExternal('https://twitter.com/AeonCommunity')" href="#">Twitter Aeon Community</a> -
                     <a @click="openExternal('https://www.medium.com/@Aeon_Community/')" href="#">Medium</a> -
+                    <a @click="openExternal('http://162.210.173.150')" href="#">Block Explorer</a> - 
                 </p>
             </div>
 
