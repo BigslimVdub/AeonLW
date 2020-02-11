@@ -14,11 +14,11 @@ export const address = (input) => {
 
     switch (input.substring(0,2)) {
         case "Wm":
-        case "Wz":
         case "Xn":
         case "Um":
             return input.length === 97
-
+        case "Wz":
+            return input.length === 108
         default:
             return false
     }
