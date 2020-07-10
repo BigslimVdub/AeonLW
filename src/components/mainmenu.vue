@@ -34,7 +34,7 @@
             <img class="q-mb-md" src="statics/icon_128x128.png" height="42" />
 
             <p class="q-my-sm">Version: AeonLW v{{version}}-v{{daemonVersion}}</p>
-            <p class="q-my-sm">Copyright (c) 2014-2019 Aeon Currency Project</p>
+            <p class="q-my-sm">Copyright (c) 2014-2020 Aeon Currency Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2019 Ryo Currency Project</p>
             <p class="q-my-sm">All rights reserved.</p>
 
@@ -45,11 +45,18 @@
                 <p>
                     <a @click="openExternal('https://t.me/AEONgroup')" href="#">Telegram</a> -
                     <a @click="openExternal('https://discord.gg/xWZ2z78')" href="#">Discord</a> -
+                    <a @click="openExternal('https://riot.im/app/#/room/%23aeon:matrix.org')" href="#">Matrix Chat</a>  
+                </p>
+                <p>
                     <a @click="openExternal('https://www.reddit.com/r/aeon/')" href="#">Reddit</a> -
+                    <a @click="openExternal('https://bitcointalk.org/index.php?topic=641696.0')" href="#">BitcoinTalk</a> -
                     <a @click="openExternal('https://twitter.com/AeonCoin')" href="#">Twitter</a> -
                     <a @click="openExternal('https://twitter.com/AeonCommunity')" href="#">Twitter Aeon Community</a> -
-                    <a @click="openExternal('https://www.medium.com/@Aeon_Community/')" href="#">Medium</a> -
-                    <a @click="openExternal('http://162.210.173.150')" href="#">Block Explorer</a> - 
+                    <a @click="openExternal('https://www.medium.com/@Aeon_Community/')" href="#">Medium</a>  
+                </p>
+                <p>
+                    <a @click="openExternal('http://162.210.173.150')" href="#">Official Block Explorer</a> -
+                    <a @click="openExternal('https://www.aeonfunding.com/')" href="#">Funding System</a>    
                 </p>
             </div>
 
@@ -88,6 +95,7 @@ export default {
     },
     computed: mapState({
         theme: state => state.gateway.app.config.appearance.theme,
+        daemon_type: state => state.gateway.app.config.daemon.type
     }),
     methods: {
         openExternal (url) {
@@ -121,7 +129,7 @@ export default {
                     // short delay to prevent wallet data reaching the
                     // websocket moments after we close and reset data
                     this.$store.dispatch("gateway/resetWalletData")
-                }, 500);
+                }, 250);
             }).catch(() => {
             })
         },

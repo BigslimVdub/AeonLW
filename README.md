@@ -47,7 +47,7 @@ npm install -g quasar-cli
 git clone https://github.com/aeonix/aeon
 cd aeon
 -- for development testing: make release-static (Wait for aeon to build binaries)
--- for personal use: You can download the latest Aeon cli release and use those binaries.
+-- for personal use: You can download the latest Aeon cli release and use those binaries if you choose to.
 cp /path/to/aeon/binaries/aeond /path/to/AeonLW/bin/
 cp /path/to/aeon/binaries/aeon-wallet-rpc /path/to/AeonLW/bin/
 cd /path/to/AeonLW
@@ -65,7 +65,8 @@ Note: this has not been fully tested, recommend to use ``npm run build`` for you
 
 v1.0.0 - Initial release usable on Daemon version 0.12.9.0 mainnet. 
 v1.0.1 - Maintenance release to incorporate locked ring 3 and use of latest Aeon binaries from 9/2019
-v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0, minor enhancements to operation and text for better UX
+v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0.0, minor enhancements to operation and text for better UX
+v1.2.0 - Update to v0.13.1.0 Daemon/RPC, Other small enhancements for functionality. Updated "About" page for more links. Bump version.
 
 ### Known AeonLW Bugs/Issues
 
@@ -85,9 +86,11 @@ v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0, mino
 
 ### LICENSE
 
+Copyright (c) 2019-2020, BigslimVdub
+
 Copyright (c) 2018-2019, Ryo Currency Project
 
-Copyright (c) 2019, Aeon Currency Project
+Copyright (c) 2020, Aeon Currency Project
 
 Portions of this software are available under BSD-3 license. Please see ORIGINAL-LICENSE for details
 

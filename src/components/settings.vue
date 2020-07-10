@@ -58,7 +58,7 @@
                     <q-item v-for="(entry, index) in daemon.bans">
                         <q-item-main>
                             <q-item-tile label>{{ entry.host }}</q-item-tile>
-                            <q-item-tile sublabel>Banned until {{ new Date(Date.now() + entry.seconds * 1000).toLocaleString() }}</q-item-tile>
+                            <q-item-tile sublabel>Cock the ban hammer until {{ new Date(Date.now() + entry.seconds * 1000).toLocaleString() }}</q-item-tile>
                         </q-item-main>
                     </q-item>
 
