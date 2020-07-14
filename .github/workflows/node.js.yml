@@ -39,7 +39,7 @@ jobs:
               shell: bash
               working-directory: ./downloads
 
-            - name: Move arqmad binaries
+            - name: Move aeond binaries
               run: |
                 find ./downloads -type f -name "aeond*" -exec cp '{}' ./bin \;
                 find ./downloads -type f -name "aeond-wallet-rpc*" -exec cp '{}' ./bin \;
