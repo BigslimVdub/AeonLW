@@ -1229,7 +1229,7 @@ export class WalletRPC {
 
     sendGateway(method, data) {
         // if wallet is closed, do not send any wallet data to gateway
-        // this is for the case that we close the wallet at the same
+        // this is for the case that we close the wallet at the same time
         // after another action has started, but before it has finished
         if(!this.wallet_state.open && method == "set_wallet_data")
             return
