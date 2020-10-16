@@ -170,6 +170,7 @@ module.exports = function (ctx) {
                 appId: "com.aeon.wallet",
                 productName: "AeonLW",
                 copyright: "Copyright © 2014-2020 Aeon Currency Project",
+                copyright: "Copyright © 2019-2020 BigSlimVdub",
 
                 // directories: {
                 //     buildResources: "src-electron/build"

@@ -34,6 +34,7 @@
             <img class="q-mb-md" src="statics/icon_128x128.png" height="42" />
 
             <p class="q-my-sm">Version: AeonLW v{{version}}-v{{daemonVersion}}</p>
+            <p class="q-my-sm">Copyright (c) 2019-2020 BigSlimVdub</p>
             <p class="q-my-sm">Copyright (c) 2014-2020 Aeon Currency Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2019 Ryo Currency Project</p>
             <p class="q-my-sm">All rights reserved.</p>
