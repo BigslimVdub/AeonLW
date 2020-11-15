@@ -1,7 +1,7 @@
 {
   "name": "AeonLW",
-  "version": "1.4.0",
-  "daemonVersion": "0.14.0.0",
+  "version": "1.4.1",
+  "daemonVersion": "0.14.1.0",
   "description": "A Lightweight Digital Aeon Wallet",
   "productName": "AEONLW",
   "repository": {

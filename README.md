@@ -68,6 +68,7 @@ v1.0.1 - Maintenance release to incorporate locked ring 3 and use of latest Aeon
 v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0.0, minor enhancements to operation and text for better UX
 v1.2.0 - Update to v0.13.1.0 Daemon/RPC, Other small enhancements for functionality. Updated "About" page for more links. Bump version.
 v1.4.0 - Update to Aeon v0.14.0.0 Daemon/RPC, Fix wallet and config creation issues, Fix wallet swtiching issues, Bump version to match Aeon
+v1.4.1 - Update daemon/rpc to v0.14.1.0 Aeon
 
 ### Known AeonLW Bugs/Issues
 
