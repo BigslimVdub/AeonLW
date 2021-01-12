@@ -180,6 +180,10 @@ module.exports = function (ctx) {
                     "!dev-app-update.yml"
                 ],
 
+                win: {
+                  icon: 'src-electron/icons/icon.ico'
+                },
+                
                 linux: {
                     target: ["deb"],
                     icon: "src-electron/icons/linux-512x512.png",
