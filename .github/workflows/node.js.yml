@@ -10,7 +10,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                os: [osx-10.15.7, windows-2020, ubuntu-18.04.2]
+                os: [windows-2016, ubuntu-latest, osx]
 
         steps:
             - name: Checkout git repo
@@ -49,7 +49,7 @@ jobs:
             - name: Install builder
               run: npm install -g quasar-cli
               
-            - name: Install npm deps  
+            - name: Install dependencies 
               run: npm install -f
 
             - name: Publish window and linux binaries
