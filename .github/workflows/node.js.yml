@@ -28,13 +28,13 @@ jobs:
               run: node ./build/download-binaries.js
 
             - name: Extract zip binaries
-              if: runner.os != 'Linux'
+              if: runner.os == 'Windows'
               run: unzip latest.zip
               shell: bash
               working-directory: ./downloads
 
             - name: Extract gz binaries
-              if: runner.os == 'Linux'
+              if: runner.os != 'Windows'
               run: tar -xf latest.bz2
               shell: bash
               working-directory: ./downloads
