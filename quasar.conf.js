@@ -169,8 +169,9 @@ module.exports = function (ctx) {
 
                 appId: "com.aeon.wallet",
                 productName: "AeonLW",
-                copyright: "Copyright © 2014-2020 Aeon Currency Project",
-                copyright: "Copyright © 2019-2020 BigSlimVdub",
+                copyright: "Copyright © 2014-2021 Aeon Currency Project",
+                copyright: "Copyright © 2019-2021 BigSlimVdub",
+                copyright: "Copyright © 1996-2021 The dude at the burger joint with the flipped lid",
 
                 // directories: {
                 //     buildResources: "src-electron/build"
@@ -192,7 +193,7 @@ module.exports = function (ctx) {
 
                 mac: {
                     icon: "src-electron/icons/icon.icns",
-                    //use if you want a pkg file not dmg, osX 10.16+
+                    //use if you want a pkg file not dmg, < OSX 10.16
                     //target: "pkg",
                     category: "public.app-category.finance"
                 },

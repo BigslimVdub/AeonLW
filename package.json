@@ -17,6 +17,8 @@
   "scripts": {
     "dev": "quasar dev -m electron -t mat",
     "build": "quasar build -m electron -t mat",
+    "deb64": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64",
+    "rpm64": "electron-installer-redhat --src dist/app-linux-x64/ --dest dist/installers/ --arch x86_64",
     "lint": "eslint --ext .js,.vue src",
     "lint-fix": "eslint --fix .",
     "test": "echo \"No test specified\" && exit 0",
@@ -42,6 +44,7 @@
     "electron-builder": "^21.2.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",
+    "electron-installer-debian": "^0.6.0",
     "electron-packager": "^12.1.1",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",

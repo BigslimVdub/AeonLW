@@ -59,6 +59,16 @@ To build on all operating systems run:
 ```
 npm run build-all
 ```
+
+To build on Debian:
+
+```
+npm run deb64
+```
+or for RedHat:
+```
+npm run rom64
+```
 Note: this has not been fully tested, recommend to use ``npm run build`` for your specific operating system.
 
 ### Change NOTES:
