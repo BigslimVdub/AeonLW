@@ -43,7 +43,11 @@ Welcome to AeonLW, the new Electron based Aeon Wallet. This wallet is a new ligh
 ### Building from source
 
 ```
+git clone https://github.com/bigslimvdub/aeonlw
+cd aeonlw
+mkdir bin
 npm install -g quasar-cli
+cd..
 git clone https://github.com/aeonix/aeon
 cd aeon
 -- for development testing: make release-static (Wait for aeon to build binaries)
@@ -54,32 +58,44 @@ cd /path/to/AeonLW
 npm install
 npm run build
 ```
+
 To build on all operating systems run:
 
 ```
 npm run build-all
 ```
 
-To build on Debian:
+Note: this has not been fully tested or implemented, recommend to use ``npm run build`` for your specific operating system.
+
+*To build on Debian:
 
 ```
+npm install -g electron-installer-debian
 npm run deb64
 ```
-or for RedHat:
+
+*or for RedHat:
+
 ```
-npm run rom64
+npm install -g electron-installer-redhat
+npm run rpm64
 ```
-Note: this has not been fully tested, recommend to use ``npm run build`` for your specific operating system.
 
 ### Change NOTES:
 
 v1.0.0 - Initial release usable on Daemon version 0.12.9.0 mainnet. 
-v1.0.1 - Maintenance release to incorporate locked ring 3 and use of latest Aeon binaries from 9/2019
-v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0.0, minor enhancements to operation and text for better UX
+
+v1.0.1 - Maintenance release to incorporate locked ring 3 and use of latest Aeon binaries from 9/2019.
+
+v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0.0, minor enhancements to operation and text for better UX.
+
 v1.2.0 - Update to v0.13.1.0 Daemon/RPC, Other small enhancements for functionality. Updated "About" page for more links. Bump version.
-v1.4.0 - Update to Aeon v0.14.0.0 Daemon/RPC, Fix wallet and config creation issues, Fix wallet swtiching issues, Bump version to match Aeon
-v1.4.1 - Update daemon/rpc to v0.14.1.0 Aeon
-v1.4.2 - Refresh logos and other build fixes
+
+v1.4.0 - Update to Aeon v0.14.0.0 Daemon/RPC, Fix wallet and config creation issues, Fix wallet swtiching issues, Bump version to match Aeon.
+
+v1.4.1 - Update daemon/rpc to v0.14.1.0 Aeon.
+
+v1.4.2 - Refresh logos and other build fixes. Add Redhat and Debian build support for RasPi.
 
 ### Known AeonLW Bugs/Issues
 
@@ -107,15 +123,15 @@ Copyright (c) 2014-2021, Aeon Currency Project
 
 Portions of this software are available under BSD-3 license. Please see ORIGINAL-LICENSE for details
 
-All rights reserved.
-
-This is an open sourced project. Anyone can contribute. 
-
-If you would like to contribute outside software changes, please feel free to contribute here:
+All rights reserved. Don't be that guy and not give recognition to those who have put time 
+and effort into applications like this. Make an effort to say thank you. 
 
 Aeon address: XnZQsgTMKciVcyZxNch8TneZMNy4rCTmc5dgZ1GKEkAs3kGb89q3m26hUWtXUvcJNpgBikLTdoHkCXYcqxPJBwA3373F4hcVc
 
 XMR addres: 85PJWUVwPJZQqP4WCZfNzUJ7X89YQoHDU3ponKBeqyzV7MKxzkWkzerJy3Yfo3gYwXi92uoF7KodkinZfA9aeVpRPPEXpAh
+
+This is an open sourced project. Anyone can contribute. If you find an issue or want a change then
+make a PR and if its good it will get merged.
 
 Thank you for supporting this project. Feedback is welcomed in any form. Please give thanks to Mosu-Forge for the
 original implementation of Electron wallet for Ryo. 
