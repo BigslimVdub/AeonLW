@@ -53,7 +53,7 @@ jobs:
               run: npm install -g quasar-cli
             
             - name: NPM install
-            - run: npm install
+              run: npm install
 
             - name: Build binaries
               run: npm run build
