@@ -51,12 +51,14 @@ jobs:
             
             - name: Install builder
               run: npm install -g quasar-cli
+            
+            - name: NPM install
+            - run: npm install
 
-            - name: Publish window and linux binaries
-              ##if: runner.os != 'macOS'
+            - name: Build binaries
               run: npm run build
-              env:
-                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              ##env:
+               ## GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Remove un-needed artifacts
               run: rm -r -- ./*/
