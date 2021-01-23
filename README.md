@@ -69,10 +69,11 @@ v1.1.0 - Mainnet release of AeonLW for use with Daemon/RPC versions 0.13.0.0, mi
 v1.2.0 - Update to v0.13.1.0 Daemon/RPC, Other small enhancements for functionality. Updated "About" page for more links. Bump version.
 v1.4.0 - Update to Aeon v0.14.0.0 Daemon/RPC, Fix wallet and config creation issues, Fix wallet swtiching issues, Bump version to match Aeon
 v1.4.1 - Update daemon/rpc to v0.14.1.0 Aeon
+v1.4.2 - Refresh logos and other build fixes
 
 ### Known AeonLW Bugs/Issues
 
-* When first installing AeonLW with no Aeon blockchain file in your specified folder (you have never synced a daemon with the Aeon network before), AeonLW may take a while to sync with the network as it is doing a full sync not fast sync validating all blocks on the blockchain from 0. Fix- Wait for daemon to sync. This may take up to 2 hours on lower-end hardware (ex: HDD or 2 core processor) or longer if the user has poor/slow internet connection. Aeon blockchain sync time is considerably faster than other blockchains with 5 years of blockchain history to validate and 8gb of data.
+* When first installing AeonLW with no Aeon blockchain file in your specified folder (you have never synced a daemon with the Aeon network before), AeonLW may take a while to sync with the network as it is doing a full sync not fast sync validating all blocks on the blockchain from 0. Fix- Wait for daemon to sync. This may take up to 2 hours on lower-end hardware (ex: HDD or 2 core processor) or longer if the user has poor/slow internet connection. Aeon blockchain sync time is considerably faster than other blockchains with 6 years of blockchain history to validate and 8gb of data.
 
 * If the user creates or restores a wallet before the daemon sync is 100% and moves to wallet main screen, updating progress may look like it is stuck for block sync and wallet sync. Daemon and Wallet are syncing in the background and some lower-end hardware takes longer to refresh the status bars. Fix- User closes the application and reopens and an updated block height will be shown for both as sync re-continues.
 
@@ -88,11 +89,11 @@ v1.4.1 - Update daemon/rpc to v0.14.1.0 Aeon
 
 ### LICENSE
 
-Copyright (c) 2019-2020, BigslimVdub
+Copyright (c) 2019-2021, BigslimVdub
 
 Copyright (c) 2018-2019, Ryo Currency Project
 
-Copyright (c) 2014-2020, Aeon Currency Project
+Copyright (c) 2014-2021, Aeon Currency Project
 
 Portions of this software are available under BSD-3 license. Please see ORIGINAL-LICENSE for details
 

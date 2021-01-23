@@ -1,6 +1,6 @@
 {
   "name": "AeonLW",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "daemonVersion": "0.14.1.0",
   "description": "A Lightweight Digital Aeon Wallet",
   "productName": "AEONLW",
@@ -39,7 +39,7 @@
     "babel-eslint": "^8.2.1",
     "devtron": "^1.4.0",
     "electron": "^2.0.0",
-    "electron-builder": "^20.28.4",
+    "electron-builder": "^21.2.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",
     "electron-packager": "^12.1.1",

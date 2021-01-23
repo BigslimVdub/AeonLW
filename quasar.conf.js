@@ -192,6 +192,8 @@ module.exports = function (ctx) {
 
                 mac: {
                     icon: "src-electron/icons/icon.icns",
+                    //use if you want a pkg file not dmg, osX 10.16+
+                    //target: "pkg",
                     category: "public.app-category.finance"
                 },
 
