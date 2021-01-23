@@ -10,17 +10,11 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                os: [osx-latest, windows-10, ubuntu-latest]
+                os: [osx-10.15.7, windows-2020, ubuntu-18.04.2]
 
         steps:
             - name: Checkout git repo
               uses: actions/checkout@v1
-            
-            - name: move
-              run: cd aeonlw
-            
-            - name: mkbin
-              run: mkdir bin
 
             - name: Install node
               uses: actions/setup-node@v1
@@ -59,7 +53,7 @@ jobs:
               run: npm install -f
 
             - name: Publish window and linux binaries
-              if: runner.os != 'macOS'
+              ##if: runner.os != 'macOS'
               run: npm run build
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
