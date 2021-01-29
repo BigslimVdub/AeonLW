@@ -1,29 +1,47 @@
 name: AeonLW Wallet Build
 on:
+    pull_request:
+        branches: 
+            - master
     push:
         branches:
             - master
-
 jobs:
-    build:
-        runs-on: ${{ matrix.os }}
-        strategy:
-            fail-fast: false
-            matrix:
-                os: [windows-2016, ubuntu-latest, macos-latest]
+ build:
+  strategy:
+      fail-fast: false
+      matrix:
+          node-version: [11.9.0]
+          npm-version: [6.14.8]
+          os: [ windows-2019, ubuntu-18.04, macos-10.15, debian-latest, xubuntu-latest ]
+  runs-on: ${{ matrix.os }}
+  name: ${{ matrix.os }}-node-${{ matrix.node-version }}
 
-        steps:
+  steps:
+            - name: list contents 
+              run: ls
+              
             - name: Checkout git repo
-              uses: actions/checkout@v1
-
-            - name: Install node
-              uses: actions/setup-node@v1
+              uses: actions/checkout@v2
+              
+            - name: Use Node.js
+              uses: actions/setup-node@v2
               with:
-                node-version: "11.9.0"
-              
-            - name: Install dependencies 
-              run: npm install -f
-              
+               node-version: ${{ matrix.node-version }}
+     
+            - name: force npm 6.14.8
+              run: npm install -g npm@6.14.8
+            - name: check node version
+              run: npm version 
+            - name: Install dependencies
+              run: npm install -g quasar-cli
+            - name: npm install
+              run: npm install
+            - name: make bin
+              run: mkdir bin
+            - name: list files
+              run: ls
+
             - name: Download Aeon binaries
               run: node ./build/download-binaries.js
 
@@ -42,7 +60,7 @@ jobs:
             - name: Move aeond binaries
               run: |
                 find ./downloads -type f -name "aeond*" -exec cp '{}' ./bin \;
-                find ./downloads -type f -name "aeond-wallet-rpc*" -exec cp '{}' ./bin \;
+                find ./downloads -type f -name "aeon-wallet-rpc*" -exec cp '{}' ./bin \;
               shell: bash
 
             - name: Verify binaries
@@ -50,29 +68,34 @@ jobs:
               shell: bash
               
             - name: Build Lunux_Win binaries
+              continue-on-error: true
               if: runner.os != 'macOS'
               run: npm run build
               env:
-                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+              
             - name: Build mac binaries
               if: runner.os == 'macOS'
+              continue-on-error: true
               run: npm run build
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                CSC_LINK: ${{ secrets.MAC_CERTIFICATE }}
-                CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTIFICATE_PASSWORD }}
-                ELECTRON_WALLET_APPLE_ID: ${{ secrets.ELECTRON_WALLET_APPLE_ID }}
-                ELECTRON_WALLET_PASSWORD: ${{ secrets.ELECTRON_WALLET_PASSWORD }}
-                ELECTRON_WALLET_TEAM_ID: ${{ secrets.ELECTRON_WALLET_TEAM_ID }}  
-
+              ##  CSC_LINK: ${{ secrets.MAC_CERTIFICATE }}
+              ##  CSC_KEY_PASSWORD: ${{ secrets.MAC_CERTIFICATE_PASSWORD }}
+              ##  ELECTRON_WALLET_APPLE_ID: ${{ secrets.ELECTRON_WALLET_APPLE_ID }}
+              ##  ELECTRON_WALLET_PASSWORD: ${{ secrets.ELECTRON_WALLET_PASSWORD }}
+              ##  ELECTRON_WALLET_TEAM_ID: ${{ secrets.ELECTRON_WALLET_TEAM_ID }}  
+            
+            - name: list files
+              run: ls
+            
             - name: Remove un-needed artifacts
-              run: rm -r -- ./*/
+              run: rm -r ./dist//electron-mat/UnPackaged
               shell: bash
               working-directory: ./dist/electron-mat/Packaged
-
-            - name: Upload artifacts
-              uses: actions/upload-artifact@v1
-              with:
-                name: ${{ runner.OS }}
-                path: dist/electron-mat/Packaged
+              
+         #   - name: Upload artifacts
+          #    uses: actions/upload-artifact@v1
+          #    with:
+        #        name: ${{ runner.OS }}
+         #       path: dist/electron-mat/Packaged
