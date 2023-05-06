@@ -41,7 +41,7 @@
     "babel-eslint": "^8.2.1",
     "devtron": "^1.4.0",
     "electron": "^2.0.0",
-    "electron-builder": "^22.9.0",
+    "electron-builder": "^23.6.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",
     "electron-installer-debian": "^3.1.0",
